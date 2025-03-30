@@ -21,7 +21,7 @@ body {
 .restaurant-header {
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,7 +74,7 @@ body {
 .food-categories {
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   width: 450px;
   background-color: #F8F4F4;
 }
@@ -96,7 +96,7 @@ body {
 .category-item {
   padding: 15px;
   border-radius: 20px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   text-align: center;
   font-size: 22px;
   font-weight: 700;
@@ -106,7 +106,7 @@ body {
 
 /* Selected category item (for Soups) */
 .category-list li:nth-child(5) {
-  border: 2px solid red;
+  border: 2.5px solid red;
   background-color: #ffe4c4;
 }
 
@@ -114,7 +114,7 @@ body {
 .menu-section {
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   flex-grow: 1;
   background-color: #F8F4F4;
 }
@@ -125,7 +125,7 @@ body {
   display: flex;
   align-items: stretch;
   border-radius: 20px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   margin-bottom: 20px;
   background-color: #f8f4f4;
 }
@@ -146,7 +146,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   cursor: pointer;
-  border-left: 2px solid #000;
+  border-left: 2.5px solid #000;
   margin: -10px 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -164,7 +164,7 @@ body {
 .dish-card {
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -211,16 +211,21 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding-left: 20px;
-  border-left: 2px solid #000;
+  border-left: 2.5px solid #000;
   align-self: stretch;
   height: auto;
   margin: -20px 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 15px;
   margin-right: -20px;
   min-width: 160px;
+  white-space: nowrap;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -228,7 +233,7 @@ body {
 .order-panel {
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   width: 450px;
   background-color: #F8F4F4;
 }
@@ -248,7 +253,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #000;
+  border-bottom: 2.5px solid #000;
 }
 
 .order-item-name {
@@ -256,20 +261,33 @@ body {
   font-weight: 700;
 }
 
+.order-item-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-quantity-btn, 
 .remove-btn {
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.add-icon, 
 .remove-icon {
   cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 .order-summary {
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   margin-bottom: 20px;
   background-color: #F8F4F4;
 }
@@ -285,10 +303,11 @@ body {
 .checkout-btn {
   padding: 15px;
   width: 100%;
-  border: 2px solid #000;
+  border: 2.5px solid #000;
   border-radius: 10px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Saira', sans-serif;
   cursor: pointer;
   background-color: #f8f4f4;
 }
@@ -336,7 +355,7 @@ body {
 
   .add-to-cart-btn {
     border-left: none;
-    border-top: 2px solid #000;
+    border-top: 2.5px solid #000;
     padding-top: 10px;
     justify-content: center;
   }
