@@ -1,362 +1,399 @@
 /* Base styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Saira', sans-serif;
-  line-height: 1.6;
-  background-color: #E6BE8A;
-}
-
-.container {
-  max-width: 2160px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Restaurant header */
-.restaurant-header {
-  padding: 20px;
-  border-radius: 10px;
-  border: 2.5px solid #000;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  background-color: #f8f4f4;
-  position: relative;
-}
-
-.restaurant-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.restaurant-name-stylized {
-  font-family: "Italianno", cursive;
-  font-size: 35px;
-  color: #ffeb14;
-  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-  -webkit-text-stroke: 1.5px #000;
-  font-weight: normal;
-}
-
-.restaurant-address {
-  font-size: 19px;
-  font-weight: 700;
-  margin-top: 5px;
-  font-style: normal;
-  text-align: left;
-}
-
-.restaurant-name-large {
-  font-size: 50px;
-  font-weight: 700;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Content layout */
-.content-wrapper {
-  display: flex;
-  gap: 20px;
-}
-
-/* Food categories */
-.food-categories {
-  padding: 20px;
-  border-radius: 10px;
-  border: 2.5px solid #000;
-  width: 450px;
-  background-color: #F8F4F4;
-}
-
-.section-title {
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.category-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style-type: none;
-}
-
-.category-item {
-  padding: 15px;
-  border-radius: 20px;
-  border: 2.5px solid #000;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: #f8f4f4;
-}
-
-/* Selected category item (for Soups) */
-.category-list li:nth-child(5) {
-  border: 2.5px solid red;
-  background-color: #ffe4c4;
-}
-
-/* Menu section */
-.menu-section {
-  padding: 20px;
-  border-radius: 10px;
-  border: 2.5px solid #000;
-  flex-grow: 1;
-  background-color: #F8F4F4;
-}
-
-/* Search bar */
-.search-bar {
-  padding: 10px;
-  display: flex;
-  align-items: stretch;
-  border-radius: 20px;
-  border: 2.5px solid #000;
-  margin-bottom: 20px;
-  background-color: #f8f4f4;
-}
-
-.search-input {
-  padding: 0 10px;
-  flex-grow: 1;
-  border: none;
-  background: transparent;
-  font-size: 24px;
-  font-family: 'Saira', sans-serif;
-}
-
-.search-button {
-  padding: 0 20px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  font-weight: 700;
-  cursor: pointer;
-  border-left: 2.5px solid #000;
-  margin: -10px 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-/* Menu items */
-.menu-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.dish-card {
-  padding: 20px;
-  border-radius: 20px;
-  border: 2.5px solid #000;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  width: 100%;
-  background-color: #F8F4F4;
-  position: relative;
-}
-
-.dish-info {
-  flex-grow: 1;
-  margin-right: 20px;
-}
-
-.dish-name {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.dish-details {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.dish-price {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.dish-image {
-  width: 66px;
-  height: 82px;
-  border-radius: 86px;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-.add-to-cart-btn {
-  background: none;
-  border: none;
-  font-size: 22px;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-left: 2.5px solid #000;
-  align-self: stretch;
-  height: auto;
-  margin: -20px 0;
-  padding: 20px 15px;
-  margin-right: -20px;
-  min-width: 160px;
-  white-space: nowrap;
-}
-
-.cart-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Order panel */
-.order-panel {
-  padding: 20px;
-  border-radius: 10px;
-  border: 2.5px solid #000;
-  width: 450px;
-  background-color: #F8F4F4;
-}
-
-.order-count {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.order-items {
-  margin-bottom: 20px;
-  list-style-type: none;
-}
-
-.order-item {
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2.5px solid #000;
-}
-
-.order-item-name {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.order-item-buttons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.add-quantity-btn, 
-.remove-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.add-icon, 
-.remove-icon {
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-}
-
-.order-summary {
-  padding: 20px;
-  border-radius: 10px;
-  border: 2.5px solid #000;
-  margin-bottom: 20px;
-  background-color: #F8F4F4;
-}
-
-.summary-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.checkout-btn {
-  padding: 15px;
-  width: 100%;
-  border: 2.5px solid #000;
-  border-radius: 10px;
-  font-size: 22px;
-  font-weight: 600;
-  font-family: 'Saira', sans-serif;
-  cursor: pointer;
-  background-color: #f8f4f4;
-}
-
-/* Responsive styles */
-@media (max-width: 991px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Saira', sans-serif;
+    line-height: 1.6;
+    background-color: #E6BE8A;
+  }
+  
   .container {
-    max-width: 991px;
+    max-width: 2160px;
+    margin: 0 auto;
+    padding: 20px;
   }
-
-  .content-wrapper {
-    flex-direction: column;
-  }
-
-  .food-categories,
-  .menu-section,
-  .order-panel {
-    width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-
+  
+  /* Restaurant header */
   .restaurant-header {
-    flex-direction: column;
-    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f8f4f4;
+    position: relative;
   }
-
+  
+  .restaurant-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .restaurant-name-stylized {
+    font-family: "Italianno", cursive;
+    font-size: 35px;
+    color: #ffeb14;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 1.5px #000;
+    font-weight: normal;
+  }
+  
+  .restaurant-address {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 5px;
+    font-style: normal;
+    text-align: left;
+  }
+  
   .restaurant-name-large {
-    font-size: 40px;
-    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  .menu-row {
-    flex-direction: column;
+  
+  /* Content layout */
+  .content-wrapper {
+    display: flex;
+    gap: 20px;
   }
-
-  .dish-card {
-    flex-direction: column;
+  
+  /* Food categories */
+  .food-categories {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid #000;
+    width: 450px;
+    background-color: #F8F4F4;
+  }
+  
+  .section-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
     text-align: center;
   }
-
-  .add-to-cart-btn {
-    border-left: none;
-    border-top: 2.5px solid #000;
+  
+  .category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+  }
+  
+  .category-item {
+    padding: 15px;
+    border-radius: 20px;
+    border: 2.5px solid #000;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #f8f4f4;
+  }
+  
+  /* Selected category item (for Soups) */
+  .category-list li:nth-child(5) {
+    border: 2.5px solid red;
+    background-color: #ffe4c4;
+  }
+  
+  /* Menu section */
+  .menu-section {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid #000;
+    flex-grow: 1;
+    background-color: #F8F4F4;
+  }
+  
+  /* Search bar */
+  .search-bar {
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+    border-radius: 20px;
+    border: 2.5px solid #000;
+    margin-bottom: 20px;
+    background-color: #f8f4f4;
+  }
+  
+  .search-input {
+    padding: 0 10px;
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    font-family: 'Saira', sans-serif;
+  }
+  
+  .search-button {
+    padding: 0 20px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    border-left: 2.5px solid #000;
+    margin: -10px 0;
     padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Menu items */
+  .menu-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .dish-card {
+    padding: 20px;
+    border-radius: 20px;
+    border: 2.5px solid #000;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #F8F4F4;
+    position: relative;
+  }
+  
+  .dish-info {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+  
+  .dish-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .dish-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dish-price {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .dish-image {
+    width: 66px;
+    height: 82px;
+    border-radius: 86px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .add-to-cart-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-left: 2.5px solid #000;
+    align-self: stretch;
+    height: auto;
+    margin: -20px 0;
+    padding: 20px 15px;
+    margin-right: -20px;
+    min-width: 160px;
+    white-space: nowrap;
+  }
+  
+  .cart-icon {
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
-}
+  
+  /* Order panel */
+  .order-panel {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid #000;
+    width: 450px;
+    background-color: #F8F4F4;
+  }
+  
+  .order-count {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .order-items {
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
+  
+  .order-item {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2.5px solid #000;
+  }
+  
+  .order-item-name {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .order-item-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .add-quantity-btn, 
+  .remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .add-icon, 
+  .remove-icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .order-summary {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid #000;
+    margin-bottom: 20px;
+    background-color: #F8F4F4;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-btn {
+    padding: 15px;
+    width: 100%;
+    border: 2.5px solid #000;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Saira', sans-serif;
+    cursor: pointer;
+    background-color: #f8f4f4;
+  }
+  
+  /* Enhanced Responsive styles with gradual breakpoints */
+  
+  /* Single breakpoint - switch to single column layout */
+  @media (max-width: 991px) {
+    .container {
+      max-width: 991px;
+    }
+    
+    /* Switch to column layout */
+    .content-wrapper {
+      flex-direction: column;
+    }
+    
+    /* Each section gets full width and stacks vertically */
+    .food-categories,
+    .menu-section,
+    .order-panel {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    /* Switch to single column for menu items */
+    .menu-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    /* Basic styling adjustments for mobile header */
+    .restaurant-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .restaurant-info {
+      align-items: center;
+      text-align: center;
+    }
+    
+    .restaurant-name-large {
+      position: relative;
+      left: 0;
+      transform: none;
+      width: 100%;
+      margin-top: 15px;
+    }
+    
+    /* IMPORTANT: Preserve the original card layout structure */
+    .dish-card {
+      display: flex;
+      flex-direction: row; /* Keep horizontal layout within the card */
+      align-items: center;
+      text-align: left;
+      padding: 20px;
+    }
+    
+    .dish-info {
+      flex-grow: 1;
+      margin-right: 20px;
+    }
+    
+    .dish-image {
+      width: 66px;
+      height: 82px;
+      margin-right: 20px;
+    }
+    
+    .add-to-cart-btn {
+      border-left: 2.5px solid #000;
+      border-top: none;
+      align-self: stretch;
+      margin: -20px 0;
+      margin-right: -20px;
+      padding: 20px 15px;
+      min-width: 160px;
+      width: auto;
+    }
+    
+    /* Order item adjustments */
+    .order-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
