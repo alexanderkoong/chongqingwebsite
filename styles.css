@@ -5,20 +5,20 @@
     box-sizing: border-box;
   }
   
-  /* Scale everything to 87% of original size */
+  /* Scale everything to 78% of original size */
   html {
-    font-size: 87%; /* Base font size at 87% */
-    zoom: 0.87; /* For browsers that support zoom */
-    -moz-transform: scale(0.87);
+    font-size: 78%; /* Base font size at 78% */
+    zoom: 0.78; /* For browsers that support zoom */
+    -moz-transform: scale(0.78);
     -moz-transform-origin: 0 0;
-    -o-transform: scale(0.87);
+    -o-transform: scale(0.78);
     -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.87);
+    -webkit-transform: scale(0.78);
     -webkit-transform-origin: 0 0;
-    transform: scale(0.87);
+    transform: scale(0.78);
     transform-origin: 0 0;
-    width: 114.94%; /* 100% ÷ 0.87 = 114.94% to compensate for scale */
-    height: 114.94%;
+    width: 128.21%; /* 100% ÷ 0.78 = 128.21% to compensate for scale */
+    height: 128.21%;
   }
   
   body {
