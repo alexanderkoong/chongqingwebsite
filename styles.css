@@ -1,14 +1,32 @@
-/* Base styles */
+/* Base styles with scaling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* Scale everything to 87% of original size */
+  html {
+    font-size: 87%; /* Base font size at 87% */
+    zoom: 0.87; /* For browsers that support zoom */
+    -moz-transform: scale(0.87);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.87);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.87);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.87);
+    transform-origin: 0 0;
+    width: 114.94%; /* 100% ÷ 0.87 = 114.94% to compensate for scale */
+    height: 114.94%;
+  }
+  
   body {
     font-family: 'Saira', sans-serif;
     line-height: 1.6;
     background-color: #E6BE8A;
+    width: 100%;
+    min-height: 100vh;
   }
   
   .container {
@@ -313,6 +331,64 @@
   }
   
   /* Enhanced Responsive styles with gradual breakpoints */
+  
+  /* Intermediate layout - single column menu, order box at bottom */
+  @media (max-width: 1200px) and (min-width: 992px) {
+    /* Switch to column layout */
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Categories panel stays at the top */
+    .food-categories {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    /* Menu section is second */
+    .menu-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    /* Order panel moves to the bottom */
+    .order-panel {
+      width: 100%;
+    }
+    
+    /* Switch menu items to single column */
+    .menu-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    /* Keep images visible and maintain layout */
+    .dish-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .dish-info {
+      margin-right: 15px;
+      flex-grow: 1;
+    }
+    
+    .dish-image {
+      width: 66px;
+      height: 82px;
+      margin-right: 20px;
+    }
+    
+    /* Ensure text doesn't overlap */
+    .dish-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 500px; /* More space since we're in a single column */
+    }
+  }
   
   /* Single breakpoint - switch to single column layout */
   @media (max-width: 991px) {
