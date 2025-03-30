@@ -392,8 +392,132 @@
     }
   }
   
-  /* Single breakpoint - switch to single column layout */
+
+  /* Intermediate layout - two column format with order panel below */
+  @media (max-width: 1200px) and (min-width: 1031px) {
+    /* Modify the content wrapper to handle the reordering */
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    /* Categories panel takes left column */
+    .food-categories {
+      width: calc(30% - 10px);
+      margin-bottom: 0;
+    }
+    
+    /* Menu section takes right column */
+    .menu-section {
+      width: calc(70% - 10px);
+      margin-bottom: 20px;
+    }
+    
+    /* Order panel moves to the bottom full width */
+    .order-panel {
+      width: 100%;
+      order: 3;
+    }
+    
+    /* Keep menu items in a grid layout */
+    .menu-row {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+    
+    /* Keep images visible and maintain layout */
+    .dish-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .dish-info {
+      margin-right: 15px;
+      flex-grow: 1;
+    }
+    
+    .dish-image {
+      width: 66px;
+      height: 82px;
+      margin-right: 20px;
+    }
+    
+    /* Ensure text doesn't overlap */
+    .dish-name {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 200px; /* Adjusted for the two-column layout */
+    }
+  }
+  
+  /* Single menu column but two main columns layout at 1030px */
   @media (max-width: 1030px) {
+    /* Modify the content wrapper to handle the reordering */
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    /* Categories panel takes left column */
+    .food-categories {
+      width: calc(30% - 10px);
+      margin-bottom: 0;
+    }
+    
+    /* Menu section takes right column */
+    .menu-section {
+      width: calc(70% - 10px);
+      margin-bottom: 20px;
+    }
+    
+    /* Order panel moves to the bottom full width */
+    .order-panel {
+      width: 100%;
+      order: 3;
+    }
+    
+    /* Switch menu items to single column */
+    .menu-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    /* Keep images visible and maintain layout */
+    .dish-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .dish-info {
+      margin-right: 15px;
+      flex-grow: 1;
+    }
+    
+    .dish-image {
+      width: 66px;
+      height: 82px;
+      margin-right: 20px;
+    }
+    
+    /* Ensure text doesn't overlap */
+    .dish-name {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 300px; /* More space since we're in a single column */
+    }
+  }
+
+
+
+
+
+  /* Single breakpoint - switch to single column layout */
+  @media (max-width: 750px) {
     .container {
       max-width: 991px;
     }
