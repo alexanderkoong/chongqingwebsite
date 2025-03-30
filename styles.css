@@ -332,34 +332,37 @@
   
   /* Enhanced Responsive styles with gradual breakpoints */
   
-  /* Intermediate layout - single column menu, order box at bottom */
-  @media (max-width: 1200px) and (min-width: 992px) {
-    /* Switch to column layout */
+/* Intermediate layout - two column format with order panel below */
+@media (max-width: 1310px) and (min-width: 992px) {
+    /* Modify the content wrapper to handle the reordering */
     .content-wrapper {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
     }
     
-    /* Categories panel stays at the top */
+    /* Categories panel takes left column */
     .food-categories {
-      width: 100%;
-      margin-bottom: 20px;
+      width: calc(30% - 10px);
+      margin-bottom: 0;
     }
     
-    /* Menu section is second */
+    /* Menu section takes right column */
     .menu-section {
-      width: 100%;
+      width: calc(70% - 10px);
       margin-bottom: 20px;
     }
     
-    /* Order panel moves to the bottom */
+    /* Order panel moves to the bottom full width */
     .order-panel {
       width: 100%;
+      order: 3;
     }
     
-    /* Switch menu items to single column */
+    /* Keep menu items in a grid layout */
     .menu-row {
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
       gap: 15px;
     }
     
@@ -384,14 +387,13 @@
     /* Ensure text doesn't overlap */
     .dish-name {
       white-space: nowrap;
-      overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 500px; /* More space since we're in a single column */
+      max-width: 200px; /* Adjusted for the two-column layout */
     }
   }
   
   /* Single breakpoint - switch to single column layout */
-  @media (max-width: 991px) {
+  @media (max-width: 1030px) {
     .container {
       max-width: 991px;
     }
