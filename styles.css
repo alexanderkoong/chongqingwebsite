@@ -517,7 +517,7 @@
 
 
   /* Single breakpoint - switch to single column layout */
-  @media (max-width: 750px) {
+  @media (max-width: 580px) {
     .container {
       max-width: 991px;
     }
